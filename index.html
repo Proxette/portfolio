@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Никита Проксет — Senior Frontend разработчик · лендинги и сайты под ключ</title>
+  <meta name="description" content="Никита Проксет — senior frontend разработчик. Создаю лендинги, сайты и интернет-магазины под ключ: дизайн, вёрстка, домен, хостинг, админ-панель. Калькулятор стоимости и портфолио работ." />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Никита Проксет — Senior Frontend разработчик" />
+  <meta property="og:description" content="Лендинги, сайты и интернет-магазины под ключ. Портфолио, калькулятор стоимости, связь в Telegram." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="logo">PROXETTE<span>.</span></a>
+
+      <nav class="nav" id="nav">
+        <a href="#services">Услуги</a>
+        <a href="#calc">Калькулятор</a>
+        <a href="#works">Работы</a>
+        <a href="#process">Как работаю</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://t.me/proxette" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Написать в Telegram</a>
+        <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="badge">Открыт для заказов</span>
+          <h1>Никита Проксет<br /><span class="accent">Senior Frontend</span> разработчик</h1>
+          <p class="lead">
+            Создаю <strong>лендинги, сайты и интернет-магазины под ключ</strong> — от дизайна
+            и вёрстки до домена, хостинга и админ-панели. Чисто, быстро, с заботой о результате.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">Обсудить проект</a>
+            <a href="#works" class="btn btn-ghost">Посмотреть работы</a>
+          </div>
+
+          <ul class="hero-pills">
+            <li>Под ключ</li>
+            <li>Адаптив 100%</li>
+            <li>SEO-готово</li>
+            <li>Домен + хостинг</li>
+          </ul>
+        </div>
+
+        <div class="hero-photo">
+          <!-- Замените файл assets/nikita.jpg на своё фото (рекомендуется ~800×1000px) -->
+          <div class="photo-frame">
+            <img src="assets/nikita.jpg" alt="Никита Проксет"
+                 onerror="this.style.display='none';this.parentNode.classList.add('photo-empty');" />
+            <div class="photo-placeholder">
+              <span>📷</span>
+              <p>Сюда добавьте фото:<br /><code>assets/nikita.jpg</code></p>
+            </div>
+          </div>
+          <div class="photo-card">
+            <strong>Никита Проксет</strong>
+            <span>Senior Frontend Developer</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Услуги</span>
+          <h2>Что я делаю</h2>
+          <p>Полный цикл — вам не нужно искать ещё кого-то. Беру проект и веду его до запуска.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="7" y1="6.5" x2="7" y2="6.5"/></svg>
+            </div>
+            <h3>Лендинги под ключ</h3>
+            <p>Одностраничные сайты, которые продают: структура, дизайн, анимации, формы и аналитика.</p>
+          </article>
+          <article class="card">
+            <div class="card-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="13" height="13" rx="2"/><path d="M8 19.5A1.5 1.5 0 0 0 9.5 21H18a3 3 0 0 0 3-3V8.5"/></svg>
+            </div>
+            <h3>Многостраничные сайты</h3>
+            <p>Корпоративные и каталожные сайты с понятной навигацией и адаптивом под все устройства.</p>
+          </article>
+          <article class="card">
+            <div class="card-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+            </div>
+            <h3>Интернет-магазины</h3>
+            <p>Каталог, корзина, оплата и удобная админка для управления товарами и заказами.</p>
+          </article>
+          <article class="card">
+            <div class="card-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
+            </div>
+            <h3>Запуск и сопровождение</h3>
+            <p>Подбор и регистрация домена, настройка хостинга, админ-панель, SEO и поддержка после запуска.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CALCULATOR ===================== -->
+    <section class="section section-alt" id="calc">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Стоимость</span>
+          <h2>Калькулятор стоимости</h2>
+          <p>Прикиньте ориентировочную цену за минуту. Точную смету согласуем после короткого брифа.</p>
+        </div>
+
+        <div class="calc">
+          <div class="calc-form">
+            <!-- Тип проекта -->
+            <div class="calc-block">
+              <h4>1. Тип проекта</h4>
+              <div class="opt-grid" id="calc-type">
+                <label class="opt"><input type="radio" name="ctype" value="25000" data-label="Лендинг (одностраничный)" checked /><span class="opt-box"><b>Лендинг</b><small>одностраничный · от 25 000 ₽</small></span></label>
+                <label class="opt"><input type="radio" name="ctype" value="50000" data-label="Премиум-лендинг" /><span class="opt-box"><b>Премиум-лендинг</b><small>анимации, кастом-дизайн · от 50 000 ₽</small></span></label>
+                <label class="opt"><input type="radio" name="ctype" value="90000" data-label="Многостраничный сайт" /><span class="opt-box"><b>Многостраничный сайт</b><small>от 90 000 ₽</small></span></label>
+                <label class="opt"><input type="radio" name="ctype" value="150000" data-label="Интернет-магазин" /><span class="opt-box"><b>Интернет-магазин</b><small>от 150 000 ₽</small></span></label>
+              </div>
+            </div>
+
+            <!-- Доп. опции -->
+            <div class="calc-block">
+              <h4>2. Дополнительно</h4>
+              <div class="opt-list" id="calc-addons">
+                <label class="check"><input type="checkbox" value="3000" data-label="Домен (подбор + регистрация)" /><span></span>Помощь с доменом<button type="button" class="info" aria-label="Что это" data-tip="Домен — это адрес вашего сайта в интернете (например, mysite.ru). Подберу красивое свободное имя и зарегистрирую его на вас.">?</button><em>+3 000 ₽</em></label>
+                <label class="check"><input type="checkbox" value="5000" data-label="Хостинг (настройка + год)" /><span></span>Хостинг: настройка + год<button type="button" class="info" aria-label="Что это" data-tip="Хостинг — это сервер, где «живёт» сайт и откуда он открывается у посетителей. Настрою и оплачу первый год.">?</button><em>+5 000 ₽</em></label>
+                <label class="check"><input type="checkbox" value="25000" data-label="Админ-панель / CMS" /><span></span>Админ-панель / CMS<button type="button" class="info" aria-label="Что это" data-tip="Панель управления сайтом, где вы сами меняете тексты, фото, цены и товары — без программиста.">?</button><em>+25 000 ₽</em></label>
+                <label class="check"><input type="checkbox" value="15000" data-label="SEO-оптимизация" /><span></span>SEO-оптимизация<button type="button" class="info" aria-label="Что это" data-tip="Подготовка сайта к поиску в Яндекс и Google: мета-теги, скорость, структура и ключевые слова — чтобы клиенты находили вас сами.">?</button><em>+15 000 ₽</em></label>
+                <label class="check"><input type="checkbox" value="12000" data-label="Анимации и интерактив" /><span></span>Анимации и интерактив<button type="button" class="info" aria-label="Что это" data-tip="Плавные появления блоков, эффекты при наведении и прокрутке — сайт выглядит дороже, современнее и удерживает внимание.">?</button><em>+12 000 ₽</em></label>
+                <label class="check"><input type="checkbox" value="8000" data-label="Интеграции (формы, Telegram, CRM)" /><span></span>Интеграции (формы, Telegram, CRM)<button type="button" class="info" aria-label="Что это" data-tip="Подключение форм заявок, уведомлений в Telegram, онлайн-чатов, оплаты и CRM для учёта клиентов и заказов.">?</button><em>+8 000 ₽</em></label>
+                <label class="check"><input type="checkbox" value="10000" data-label="Тексты / копирайтинг" /><span></span>Тексты / копирайтинг<button type="button" class="info" aria-label="Что это" data-tip="Напишу продающие тексты для блоков сайта (заголовки, описания, преимущества), если готовых текстов у вас нет.">?</button><em>+10 000 ₽</em></label>
+              </div>
+            </div>
+
+            <!-- Срочность -->
+            <div class="calc-block">
+              <h4>3. Сроки</h4>
+              <label class="check check-wide"><input type="checkbox" id="calc-urgent" /><span></span>Срочный запуск (ускоренные сроки)<button type="button" class="info" aria-label="Что это" data-tip="Беру проект в работу вне очереди и сокращаю сроки. Стоимость всего проекта увеличивается на 40%.">?</button><em>+40%</em></label>
+            </div>
+          </div>
+
+          <!-- Результат -->
+          <aside class="calc-result">
+            <p class="calc-result-label">Ориентировочная стоимость</p>
+            <div class="calc-price"><span id="calc-total">25 000</span> ₽</div>
+            <p class="calc-note">Финальная цена зависит от объёма и деталей. Точную смету пришлю после брифа — это бесплатно.</p>
+            <ul class="calc-summary" id="calc-summary"></ul>
+            <button type="button" class="btn btn-primary btn-block" id="calc-to-brief">Перенести в заявку →</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WORKS ===================== -->
+    <section class="section" id="works">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Портфолио</span>
+          <h2>Мои работы</h2>
+          <p>Живые превью — нажмите на любую карточку, чтобы открыть сайт целиком.</p>
+        </div>
+        <div class="works-grid" id="works-grid"><!-- генерируется в script.js --></div>
+      </div>
+    </section>
+
+    <!-- ===================== PROCESS ===================== -->
+    <section class="section section-alt" id="process">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Процесс</span>
+          <h2>Как я работаю</h2>
+          <p>Прозрачные этапы — вы всегда понимаете, что происходит и когда будет результат.</p>
+        </div>
+        <ol class="steps">
+          <li><span class="step-n">1</span><h3>Бриф</h3><p>Обсуждаем задачу, нишу и цели. Я задаю вопросы и предлагаю решение.</p></li>
+          <li><span class="step-n">2</span><h3>Дизайн</h3><p>Собираю структуру и визуал. Согласуем, пока не понравится.</p></li>
+          <li><span class="step-n">3</span><h3>Разработка</h3><p>Верстаю адаптивно, подключаю формы, анимации и аналитику.</p></li>
+          <li><span class="step-n">4</span><h3>Запуск</h3><p>Домен, хостинг, админка. Передаю проект и остаюсь на связи.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="section" id="faq">
+      <div class="container narrow">
+        <div class="section-head">
+          <span class="eyebrow">FAQ</span>
+          <h2>Частые вопросы</h2>
+        </div>
+        <div class="faq">
+          <details><summary>Сколько занимает разработка?</summary><p>Простой лендинг — от 3–5 дней, сайт под ключ — 1–3 недели в зависимости от объёма.</p></details>
+          <details><summary>Поможете с доменом и хостингом?</summary><p>Да. Подберу и зарегистрирую домен, настрою хостинг и всё подключу — вам ничего настраивать не нужно.</p></details>
+          <details><summary>Смогу ли я сам редактировать сайт?</summary><p>Да, по желанию подключаю админ-панель / CMS, чтобы вы могли менять тексты, фото и товары без программиста.</p></details>
+          <details><summary>Что с поддержкой после запуска?</summary><p>Остаюсь на связи: правки, доработки и помощь — обсуждаем индивидуально.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT / BRIEF ===================== -->
+    <section class="section section-dark" id="contact">
+      <div class="container narrow">
+        <div class="section-head">
+          <span class="eyebrow">Контакт</span>
+          <h2>Оставьте заявку</h2>
+          <p>Заполните пару пунктов — и нажмите кнопку. Я открою Telegram, а готовый бриф уже будет у вас в буфере: просто вставьте его в чат.</p>
+        </div>
+
+        <form class="brief" id="brief" autocomplete="off">
+          <div class="field">
+            <label for="f-name">Как вас зовут</label>
+            <input type="text" id="f-name" placeholder="Имя" />
+          </div>
+
+          <div class="field">
+            <label for="f-niche">Ниша / о проекте <span class="req">*</span></label>
+            <input type="text" id="f-niche" placeholder="Например: барбершоп, доставка цветов, автосервис…" required />
+          </div>
+
+          <div class="field">
+            <label for="f-type">Что нужно</label>
+            <select id="f-type">
+              <option>Лендинг</option>
+              <option>Премиум-лендинг</option>
+              <option>Многостраничный сайт</option>
+              <option>Интернет-магазин</option>
+              <option>Пока не определился(ась)</option>
+            </select>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="f-domain">Нужен домен?</label>
+              <select id="f-domain"><option>Не знаю</option><option>Да</option><option>Нет, есть</option></select>
+            </div>
+            <div class="field">
+              <label for="f-hosting">Нужен хостинг?</label>
+              <select id="f-hosting"><option>Не знаю</option><option>Да</option><option>Нет, есть</option></select>
+            </div>
+            <div class="field">
+              <label for="f-admin">Админ-панель?</label>
+              <select id="f-admin"><option>Не знаю</option><option>Да, хочу сам редактировать</option><option>Нет</option></select>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="f-budget">Бюджет</label>
+              <select id="f-budget"><option>Не определён</option><option>до 30 000 ₽</option><option>30 000 – 70 000 ₽</option><option>70 000 – 150 000 ₽</option><option>от 150 000 ₽</option></select>
+            </div>
+            <div class="field">
+              <label for="f-deadline">Сроки</label>
+              <select id="f-deadline"><option>Не горит</option><option>В течение недели</option><option>Срочно</option></select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="f-comment">Комментарий</label>
+            <textarea id="f-comment" rows="3" placeholder="Любые детали, примеры, пожелания…"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-tg btn-block">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+            Написать мне в Telegram
+          </button>
+          <p class="brief-hint" id="brief-hint">Бриф автоматически скопируется в буфер — вставьте его в чат (Ctrl + V).</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a href="#top" class="logo">PROXETTE<span>.</span></a>
+        <p class="footer-tag">Лендинги, сайты и интернет-магазины под ключ.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://t.me/proxette" target="_blank" rel="noopener">Telegram @proxette</a>
+        <a href="https://github.com/Proxette" target="_blank" rel="noopener">GitHub</a>
+        <a href="#calc">Калькулятор</a>
+        <a href="#works">Работы</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">© <span id="year"></span> Никита Проксет</div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
