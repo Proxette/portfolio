@@ -348,7 +348,7 @@ h1, h2, h3, h4 { line-height: 1.12; letter-spacing: -.025em; font-weight: 700; }
 /* ========== CONSENT CHECKBOX (форма) ========== */
 .consent { display: flex; align-items: flex-start; gap: 11px; cursor: pointer; font-size: 13px; color: var(--muted); line-height: 1.5; margin-top: 4px; }
 .consent input { position: absolute; opacity: 0; }
-.consent > span { width: 19px; height: 19px; border-radius: 5px; border: 1.5px solid var(--line-2); flex: none; display: grid; place-items: center; margin-top: 1px; transition: .15s; }
+.consent input + span { width: 19px; height: 19px; border-radius: 5px; border: 1.5px solid var(--line-2); flex: none; display: grid; place-items: center; margin-top: 1px; transition: .15s; }
 .consent input:checked + span { background: var(--accent); border-color: var(--accent); }
 .consent input:checked + span::after { content: "✓"; color: #0a0a0b; font-size: 12px; font-weight: 700; }
 .consent a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
