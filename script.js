@@ -200,6 +200,12 @@
         return;
       }
 
+      const consent = document.getElementById("f-consent");
+      if (consent && !consent.checked) {
+        showToast("Отметьте согласие с офертой и политикой конфиденциальности.");
+        return;
+      }
+
       const text = buildBrief();
       const openTg = function () { window.open(TG, "_blank", "noopener"); };
 
