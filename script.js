@@ -83,21 +83,44 @@
     }
   }
 
-  // info icons: tap/click toggles the hint (and must not toggle the checkbox)
+  // info icons → single floating tooltip, clamped to the viewport (works on hover + tap)
   const infos = document.querySelectorAll(".info");
+  const tip = document.createElement("div");
+  tip.className = "tip";
+  tip.setAttribute("role", "tooltip");
+  document.body.appendChild(tip);
+  let tipOwner = null;
+
+  function hideTip() { tip.classList.remove("show"); tipOwner = null; }
+  function showTip(btn) {
+    tip.textContent = btn.getAttribute("data-tip") || "";
+    tip.style.left = "-9999px";
+    tip.style.top = "0px";
+    tip.classList.add("show");
+    const r = btn.getBoundingClientRect();
+    const t = tip.getBoundingClientRect();
+    const m = 10; // min margin from viewport edge
+    let left = r.left + r.width / 2 - t.width / 2;
+    left = Math.max(m, Math.min(left, window.innerWidth - t.width - m));
+    let top = r.top - t.height - 10;
+    if (top < m) top = r.bottom + 10; // flip below if no room above
+    tip.style.left = left + "px";
+    tip.style.top = top + "px";
+    tipOwner = btn;
+  }
+
   infos.forEach(function (b) {
     b.addEventListener("click", function (e) {
       e.preventDefault();
       e.stopPropagation();
-      const wasOpen = b.classList.contains("open");
-      infos.forEach(function (o) { o.classList.remove("open"); });
-      if (!wasOpen) b.classList.add("open");
+      if (tipOwner === b) hideTip(); else showTip(b);
     });
+    b.addEventListener("mouseenter", function () { showTip(b); });
+    b.addEventListener("mouseleave", function () { if (tipOwner === b) hideTip(); });
   });
-  // tap/click elsewhere closes any open hint
-  document.addEventListener("click", function () {
-    infos.forEach(function (o) { o.classList.remove("open"); });
-  });
+  document.addEventListener("click", hideTip);
+  window.addEventListener("scroll", hideTip, true);
+  window.addEventListener("resize", hideTip);
 
   typeInputs.forEach(function (i) { i.addEventListener("change", renderCalc); });
   addonInputs.forEach(function (i) { i.addEventListener("change", renderCalc); });

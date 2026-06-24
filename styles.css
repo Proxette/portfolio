@@ -23,14 +23,26 @@
 
 /* ========== RESET ========== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; background: var(--bg); }
 body {
   font-family: var(--font);
   color: var(--ink);
-  background: var(--bg);
+  background: transparent;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+/* subtle fixed grid backdrop behind all content — same palette, low contrast */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size: 64px 64px;
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
@@ -143,7 +155,7 @@ h1, h2, h3, h4 { line-height: 1.12; letter-spacing: -.025em; font-weight: 700; }
 
 /* ========== SECTIONS ========== */
 .section { padding: 100px 0; }
-.section-alt { background: var(--bg-2); }
+.section-alt { background: rgba(255,255,255,.018); }
 .section-head { max-width: 640px; margin: 0 auto 56px; text-align: center; }
 .section-head h2 { font-size: clamp(28px, 3.6vw, 42px); font-weight: 800; letter-spacing: -.03em; }
 .section-head p { color: var(--muted); margin-top: 14px; font-size: 17px; }
@@ -205,25 +217,18 @@ h1, h2, h3, h4 { line-height: 1.12; letter-spacing: -.025em; font-weight: 700; }
   font-family: var(--font); transition: border-color .15s, color .15s; padding: 0;
 }
 .info:hover, .info:focus-visible { border-color: var(--accent); color: var(--accent); outline: none; }
-.info::after {
-  content: attr(data-tip);
-  position: absolute; bottom: calc(100% + 11px); left: 50%;
-  transform: translateX(-50%) translateY(5px);
-  width: min(270px, 76vw);
+/* floating tooltip — positioned by JS and clamped to the viewport (overflow-safe on mobile) */
+.tip {
+  position: fixed; z-index: 200;
+  width: max-content; max-width: min(280px, calc(100vw - 24px));
   background: var(--surface-2); color: var(--ink);
   border: 1px solid var(--line-2); border-radius: 10px; padding: 11px 13px;
-  font-size: 12.5px; font-weight: 400; line-height: 1.5; letter-spacing: 0; text-align: left;
-  box-shadow: var(--shadow-lg);
-  opacity: 0; visibility: hidden; transition: opacity .18s, transform .18s, visibility .18s;
-  z-index: 40; pointer-events: none; white-space: normal;
+  font-size: 12.5px; line-height: 1.5; text-align: left;
+  box-shadow: var(--shadow-lg); pointer-events: none;
+  display: none; opacity: 0; transform: translateY(4px);
+  transition: opacity .15s ease, transform .15s ease;
 }
-.info::before {
-  content: ""; position: absolute; bottom: calc(100% + 5px); left: 50%; transform: translateX(-50%);
-  border: 6px solid transparent; border-top-color: var(--line-2);
-  opacity: 0; visibility: hidden; transition: opacity .18s, visibility .18s; z-index: 41;
-}
-.info:hover::after, .info:focus::after, .info.open::after { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
-.info:hover::before, .info:focus::before, .info.open::before { opacity: 1; visibility: visible; }
+.tip.show { display: block; opacity: 1; transform: translateY(0); }
 
 .calc-result {
   position: sticky; top: 92px;
@@ -297,7 +302,7 @@ h1, h2, h3, h4 { line-height: 1.12; letter-spacing: -.025em; font-weight: 700; }
 .faq p { color: var(--muted); padding: 0 0 18px; }
 
 /* ========== CONTACT / BRIEF ========== */
-.section-dark { background: var(--bg-2); }
+.section-dark { background: rgba(255,255,255,.012); }
 .brief {
   display: flex; flex-direction: column; gap: 16px;
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
